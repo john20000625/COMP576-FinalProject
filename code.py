@@ -172,26 +172,26 @@ with plt.style.context(('seaborn-whitegrid')):
     val_acc12 = [i for i in history12['val_acc']]
     fig.set_size_inches(20, 10)
 
-    ax.plot(epochs, train_acc1, label='100 dimensions + CBOW + Negative Sampling')
-    ax.plot(epochs, train_acc2,
+    ax[0].plot(epochs, train_acc1, label='100 dimensions + CBOW + Negative Sampling')
+    ax[0].plot(epochs, train_acc2,
             label='100 dimensions + CBOW + Hierarchical Softmax')
-    ax.plot(epochs, train_acc3,
+    ax[0].plot(epochs, train_acc3,
             label='100 dimensions + Skip-gram + Negative Sampling')
-    ax.plot(epochs, train_acc4,
+    ax[0].plot(epochs, train_acc4,
             label='100 dimensions + Skip-gram + Hierarchical Softmax')
-    ax.plot(epochs, train_acc5, label='200 dimensions + CBOW + Negative Sampling')
-    ax.plot(epochs, train_acc6,
+    ax[0].plot(epochs, train_acc5, label='200 dimensions + CBOW + Negative Sampling')
+    ax[0].plot(epochs, train_acc6,
             label='200 dimensions + CBOW + Hierarchical Softmax')
-    ax.plot(epochs, train_acc7,
+    ax[0].plot(epochs, train_acc7,
             label='200 dimensions + Skip-gram + Negative Sampling')
-    ax.plot(epochs, train_acc8,
+    ax[0].plot(epochs, train_acc8,
             label='200 dimensions + Skip-gram + Hierarchical Softmax')
-    ax.plot(epochs, train_acc9, label='300 dimensions + CBOW + Negative Sampling')
-    ax.plot(epochs, train_acc10,
+    ax[0].plot(epochs, train_acc9, label='300 dimensions + CBOW + Negative Sampling')
+    ax[0].plot(epochs, train_acc10,
             label='300 dimensions + CBOW + Hierarchical Softmax')
-    ax.plot(epochs, train_acc11,
+    ax[0].plot(epochs, train_acc11,
             label='300 dimensions + Skip-gram + Negative Sampling')
-    ax.plot(epochs, train_acc12,
+    ax[0].plot(epochs, train_acc12,
             label='300 dimensions + Skip-gram + Hierarchical Softmax')
 
     ax[1].plot(epochs, val_acc1, label='Testing Accuracy1')
@@ -207,10 +207,10 @@ with plt.style.context(('seaborn-whitegrid')):
     ax[1].plot(epochs, val_acc11, label='Testing Accuracy11')
     ax[1].plot(epochs, val_acc12, label='Testing Accuracy12')
 
-    ax.set_title('Training Accuracy')
-    ax.legend()
-    ax.set_xlabel("Epochs")
-    ax.set_ylabel("Accuracy")
+    ax[0].set_title('Training Accuracy')
+    ax[0].legend()
+    ax[0].set_xlabel("Epochs")
+    ax[0].set_ylabel("Accuracy")
     ax[1].set_title('Testing Accuracy')
     ax[1].legend()
     ax[1].set_xlabel("Epochs")
